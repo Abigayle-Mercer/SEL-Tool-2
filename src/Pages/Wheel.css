@@ -1,0 +1,173 @@
+.container1 {
+  display: flex;
+  justify-content: space-between;
+ 
+  align-items: center;
+  height: 60vh; /* Adjust the height based on your needs */
+  margin-top: 20px;
+  width: 60vh;
+  margin-left: 30px;
+  
+ 
+
+}
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 180px;
+  align-items: right;
+  height: 60vh; /* Adjust the height based on your needs */
+ 
+
+}
+
+.titles {
+    display: flex; 
+     justify-content: space-between;
+     margin-bottom: 50px;
+      
+
+}
+
+.t1 {
+   
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 50px;
+    
+}
+
+.t2 {
+   
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 50px;
+ 
+}
+
+
+.Wrapper {
+    
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  
+}
+
+
+
+.ChartPie {
+  max-width: 100%; /* Adjust the width based on your needs */
+}
+
+.ChartPieChunk {
+  width: 100%; /* Adjust the width based on your needs */
+  height: 90%; /* Adjust the height based on your needs */
+}
+
+.PieLabel {
+  /* Styles for the labels */
+}
+
+.l1 {
+    margin-bottom: 160px;
+    width: 130px;
+    margin-right: -60px;
+}
+
+.l2 {
+    margin-bottom: 0px;
+    margin-right: -5px;
+}
+
+.l3 {
+ margin-bottom: 150px;
+ margin-left: -50px;
+ width: 70px;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+
+.l4 {
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+
+.l5 {
+  margin-left: 82px;
+  margin-right: 72px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.l6 {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+.bottomlabels {
+     display: flex;
+     align-items: center;
+    font-weight: bold;
+    justify-content: center;
+
+}
+
+.column {
+    display: flex;
+     align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.outermost {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.item1 {
+    margin-right: 25px;
+
+}
+
+
+
+
+
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin-left: 38%;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+
+
+
+
+.ql-editor{
+    min-height:200px;
+    
+}
+
+
+
