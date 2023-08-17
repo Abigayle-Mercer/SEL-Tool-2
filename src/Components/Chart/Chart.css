@@ -1,0 +1,158 @@
+.container1 {
+  display: flex;
+  justify-content: space-between;
+ 
+  align-items: center;
+  height: 60vh; /* Adjust the height based on your needs */
+  margin-top: 20px;
+  width: 60vh;
+  margin-left: 30px;  
+  font-weight: bold;
+  
+ 
+  
+}
+.l1 {
+    margin-bottom: 160px;
+    width: 130px;
+    margin-right: -60px;
+}
+
+.l2 {
+    margin-bottom: 0px;
+    margin-right: -5px;
+    width: 20px;
+}
+
+.l3 {
+ margin-bottom: 150px;
+ margin-left: -50px;
+ width: 70px;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+
+.l4 {
+  margin-bottom: 20px;
+  margin-left: -0px;
+}
+
+.l5 {
+  margin-left: 82px;
+  margin-right: 72px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.l6 {
+    margin-bottom: 10px;
+    width: 130px;
+}
+
+.bottomlabels {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    width: 200px;
+
+}
+
+.column {
+    display: flex;
+     align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.t1 {
+   
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 50px;
+    
+    
+}
+
+
+
+.leftlabels {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chart.css */
+/* Keep the existing styles and add the following */
+
+/* Container for each chart */
+.Wrapper {
+    margin: 0 auto; /* Center the boxes horizontally */
+  margin-bottom: 30px; /* Add some space between charts */
+  margin-left: 80px; 
+  margin-bottom: 220px;
+ 
+}
+
+/* Adjust labels and styles for mobile */
+@media only screen and (max-width: 728px) {
+  .Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 120px;
+    margin-top: 50px;
+
+
+  }
+
+  .column {
+    text-align: center;
+  }
+
+
+  .container1 {
+    font-size: 10px;
+  }
+
+  .l1 {
+    margin-bottom: 120px;
+    width: 130px;
+    margin-right: -60px;
+}
+
+.l2 {
+    margin-bottom: -60px;
+    margin-right: -5px;
+}
+
+.l3 {
+ margin-bottom: 115px;
+ margin-left: -30px;
+ width: 70px;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+
+.l4 {
+  margin-bottom: -35px;
+  margin-left: 5px;
+}
+}
+
+
+@media only screen and (max-width: 428px) {
+    .container1 {
+        margin-left: -64px;
+    }
+}

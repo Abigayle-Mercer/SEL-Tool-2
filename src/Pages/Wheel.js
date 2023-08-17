@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Pie from "../Components/Pie/Pie.js";
 import "./Wheel.css";
 import "react-quill/dist/quill.snow.css";
 import emailjs from "emailjs-com";
@@ -8,7 +7,10 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import ReflectionTextBox from "../Components/ReflectionTextBox/ReflectionTextBox.js";
 import EmailForm from "../Components/EmailForm/EmailForm.js";
-import { AbortedDeferredError } from "react-router-dom";
+import Chart from "../Components/Chart/Chart.js";
+
+
+
 
 function Wheel(props) {
   function savePDF(e) {
@@ -76,60 +78,22 @@ function Wheel(props) {
 
   return (
     <div id="WholePage">
-      <div id="pdfContent">
-        <div id="outermost" className="outermost">
-          <div className="container1">
-            <div className="Wrapper">
-              <div>
-                <p className="l1">Mindset</p>
-                <p className="l2">Critical Thinking</p>
-              </div>
+      <div className="wrap">
+        <Chart
+          slices={props.slices}
+          title={"Personal Practices Reflection"}
+        ></Chart>
+        <Chart
+          className="chart2"
+          slices={props.slices2}
+          title={"Teaching Practices Reflection"}
+        ></Chart>
+      </div>
 
-              <div className="column">
-                <p className="t1">Personal Practices Reflection</p>
-                <p className="l6">Sensory-Motor Integration</p>
-                <Pie id="pie" slices={props.slices} />
-                <div className="bottomlabels">
-                  <p className="l5">Connection & Identity</p>
-                  <p className="l5">Collaboration</p>
-                </div>
-              </div>
+      
 
-              <div>
-                <p className="l3">Insight</p>
-                <p className="l4">Regulation</p>
-              </div>
-            </div>
-
-            <div className="container2">
-              <div className="Wrapper">
-                <div>
-                  <p className="l1">Mindset</p>
-                  <p className="l2">Critical Thinking</p>
-                </div>
-
-                <div className="column">
-                  <p className="t2">Teaching Practifces Reflection</p>
-                  <p className="l6">Sensory-Motor Integration</p>
-                  <Pie slices={props.slices2} />
-                  <div className="bottomlabels">
-                    <p className="l5">Connection & Identity</p>
-                    <p className="l5">Collaboration</p>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="l3">Insight</p>
-                  <p className="l4">Regulation</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="reflections" className="reflections">
-          <ReflectionTextBox className="reflections"></ReflectionTextBox>
-        </div>
+      <div id="reflections" className="reflections">
+        <ReflectionTextBox className="reflections"></ReflectionTextBox>
       </div>
 
       <button className="btn-modal" onClick={toggleModal}>

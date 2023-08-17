@@ -9,7 +9,7 @@ const IndividualPrompt = (props) => {
           {props.slices[questionKey].title}
         </div>
 
-        <p>{props.slices[questionKey].question}</p>
+        <div className="question">{props.slices[questionKey].question}</div>
         <div className="Answer">
           <input
             onChange={props.selectScore(i + props.add)} // Invoke the selectScore function

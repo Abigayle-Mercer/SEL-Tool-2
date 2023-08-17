@@ -28,11 +28,47 @@
         border-radius: 5px;
         box-shadow: 1.5px 1.5px 6px rgba(114, 141, 149, 0.3);
         margin: 8px 24px;
+        
     }
 
     .Text {
         font-size: 16px;
         line-height: 26px;
         padding: 0 7px;
+    }
+}
+
+@media only screen and (max-width: 468px) and (min-width: 376px) {
+    .TextBox {
+        border-radius: 5px;
+        box-shadow: 1.5px 1.5px 6px rgba(114, 141, 149, 0.3);
+        margin-right: 15px;
+        margin-left: 15px;
+        
+        
+    }
+
+    .Text {
+        font-size: 10px;
+        line-height: 12px;
+        padding: 0 7px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .TextBox {
+        border-radius: 5px;
+        box-shadow: 1.5px 1.5px 6px rgba(114, 141, 149, 0.3);
+        margin-right: 10px;
+        margin-left: 10px;
+        
+        
+    }
+
+    .Text {
+        font-size: 10px;
+        line-height: 12px;
+        padding: 0 7px;
+       
     }
 }
