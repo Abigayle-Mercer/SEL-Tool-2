@@ -6,8 +6,8 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-    justify-content: space-between;
-    font-size: 12px;
+    
+    
     
 }
 
@@ -25,30 +25,6 @@
 
 
 
-
-.ChartPie {
-  max-width: 100%; /* Adjust the width based on your needs */
-  width: 400px;
-}
-
-.ChartPieChunk {
-  width: 100%; /* Adjust the width based on your needs */
-  height: 90%; /* Adjust the height based on your needs */
-}
-
-.PieLabel {
-  /* Styles for the labels */
-}
-
-
-
-
-.item1 {
-    margin-right: 25px;
-
-}
-
-
 .wrap {
   display: flex;
   justify-content: space-between; /* Center the charts horizontally */
@@ -60,21 +36,16 @@
 
 @media only screen and (max-width: 728px) {
   .wrap {
+   
     flex-direction: column; /* Stack the charts vertically on smaller devices */
+    justify-content: center;
+    align-items: center;
+    
+    
     
   }
 
-  .ChartPie {
-  max-width: 100%; /* Adjust the width based on your needs */
-  width: 280px;
-}
-}
 
-
-@media only screen and (max-width: 428px) { 
-  .ChartPie {
-    width: 250px;
-  }
 }
 
 
@@ -112,8 +83,9 @@ body.active-modal {
 
 }
 
-.chart2 {
-    padding-right: 100px;
+.bot {
+ 
+    margin-left: 10px;
 }
 
 

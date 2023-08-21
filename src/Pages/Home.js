@@ -333,7 +333,7 @@ export default class Home extends Component {
       },
       {
         question:
-          "I teach health conflict-management skills and strategies to my students.",
+          "I teach healthy conflict-management skills and strategies to my students.",
         title: "",
         rotate: "rotate(179.9994, 220, 220)",
         fill: "#357AFF",

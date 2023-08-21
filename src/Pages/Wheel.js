@@ -8,14 +8,17 @@ import jsPDF from "jspdf";
 import ReflectionTextBox from "../Components/ReflectionTextBox/ReflectionTextBox.js";
 import EmailForm from "../Components/EmailForm/EmailForm.js";
 import Chart from "../Components/Chart/Chart.js";
+import Pie from "../Components/Pie/Pie.js";
 
 
 
 
 function Wheel(props) {
-  function savePDF(e) {
+  async function savePDF(e) {
     e.preventDefault();
     setModal(false);
+
+    
     // let name = document.getElementById("name").value;
     // let user_email = document.getElementById("user_email").value;
     // let Q1 = document.getElementById("Q1").value;
@@ -24,44 +27,45 @@ function Wheel(props) {
     // let Q4 = document.getElementById("Q4").value;
     // let Q5 = document.getElementById("Q5").value;
     // let Q6 = document.getElementById("Q6").value;
-    let DocName = document.getElementById("name").value;
+    
+    const docName = document.getElementById("name").value;
 
-    const totalPageHeight = document.documentElement.scrollHeight;
-    const totalPageWidth = document.documentElement.scrollWidth;
-    const input = document.getElementById("outermost");
-    const input2 = document.getElementById("reflections")
+    // Create a canvas to capture the content
+    const canvas = await html2canvas(document.getElementById("WholePage"), {
+      scrollY: -window.scrollY,
+    });
+
+    const canvas2 = await html2canvas(document.getElementById("reflections"), {
+      scrollY: -window.scrollY,
+    });
+
+    
+
+    // Convert canvas to an image (DataURL)
+    const imgData = canvas.toDataURL("image/png");
+    const imgData2 = canvas2.toDataURL("image/png");
+
+
+    // Create a PDF document
     const pdf = new jsPDF("p", "mm", "a4");
 
-    html2canvas(input, {
-      logging: true,
-      letterRendering: 1,
-      useCORS: true,
-      scrollY: -window.scrollY, // Set scrollY to the top to capture the full page
-      scrollX: -window.scrollX,
-      windowHeight: totalPageHeight, // Set the canvas height to the total page height
-      windowWidth: totalPageWidth,
-    }).then((canvas) => {
-      const imgWidth = 208;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      const imgData = canvas.toDataURL("img/png");
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-    });
-       html2canvas(input2, {
-      logging: true,
-      letterRendering: 1,
-      useCORS: true,
-      scrollY: -window.scrollY, // Set scrollY to the top to capture the full page
-      scrollX: -window.scrollX,
-      windowHeight: totalPageHeight, // Set the canvas height to the total page height
-      windowWidth: totalPageWidth,
-    }).then((canvas) => {
-      const imgWidth = 208;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      const imgData = canvas.toDataURL("img/png");
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save(`${DocName}.pdf`);
-    });
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+    
+
+
+    // Add user info and image to the PDF
+    pdf.text(`Document Name: ${docName}`, 10, 10);
+    pdf.addImage(imgData, "PNG", 10, 20, 190, 0);
+    pdf.addPage();
+    pdf.addImage(imgData2, "PNG", 0, 0, 180, 0);
+
+    // Save the PDF
+    pdf.save(`${docName}.pdf`);
+  
+
+  
+  
   }
 
   const [modal, setModal] = useState(false);
@@ -77,21 +81,22 @@ function Wheel(props) {
   }
 
   return (
-    <div id="WholePage">
-      <div className="wrap">
-        <Chart
-          slices={props.slices}
-          title={"Personal Practices Reflection"}
-        ></Chart>
-        <Chart
-          className="chart2"
-          slices={props.slices2}
-          title={"Teaching Practices Reflection"}
-        ></Chart>
+    <div>
+      <div id="WholePage">
+        <div id="outermost">
+          <div className="wrap">
+            <Chart
+              slices={props.slices}
+              title={"Personal Practices Reflection"}
+            ></Chart>
+            <Chart
+              className="bot"
+              slices={props.slices2}
+              title={"Teaching Practices Reflection"}
+            ></Chart>
+          </div>
+        </div>
       </div>
-
-      
-
       <div id="reflections" className="reflections">
         <ReflectionTextBox className="reflections"></ReflectionTextBox>
       </div>
