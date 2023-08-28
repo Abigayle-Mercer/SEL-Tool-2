@@ -3,7 +3,7 @@ import "../App.css";
 import Prompts from "./Prompts";
 import Wheel from "./Wheel";
 import Banner from "../Components/Banner/Banner.js";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import ScrollToTop from "../Components/ScrollToTop/ScrollToTop";
 
 export default class Home extends Component {
@@ -480,6 +480,10 @@ export default class Home extends Component {
             <div className="App">
               <Banner t1={"Prompts"} t2={"SEL Wheel"}></Banner>
               <Routes>
+                <Route
+                  path="/SEL-Tool-2"
+                  element={<Navigate to="/Prompts" />} // Redirect root to Prompts
+                />
                 <Route
                   path="/Prompts"
                   element={

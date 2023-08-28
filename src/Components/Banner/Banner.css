@@ -9,7 +9,7 @@
 }
 
 .header {
-  margin-left: 1%;
+  margin-left: 5px;
   font-size: 23px;
   color: #494B4D;
   text-align: left;
@@ -20,7 +20,7 @@
 }
 
 .header2 {
-   margin-left: 4%;
+   margin-left: 40px;
   font-size: 23px;
   color: #494B4D;
   text-align: left;
@@ -41,14 +41,14 @@
 }
 
 .outermost {
-  width: 1500px;
-  margin-bottom: 100px;
+  width: 100%;
+  margin-bottom: 170px;
 }
 
 @media only screen and (max-width:728px) {
    .outermost {
-    width: 1500px;
-    margin-bottom: 100px;
+    width: 100%;
+    margin-bottom: 170px;
   }
 }
 

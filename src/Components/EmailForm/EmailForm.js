@@ -14,7 +14,7 @@ function EmailForm(props) {
               <input classname="in" type="text" id="name" name="name" />
             </div>
             
-            <input className="send" type="submit" value="send"></input>
+            <input className="send" type="submit" value="Download"></input>
           </div>
         </div>
       </form>
