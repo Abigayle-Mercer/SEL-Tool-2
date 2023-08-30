@@ -52,7 +52,9 @@
 
 .name {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding-top: 5px;
+    justify-content: right;
 
 }
 

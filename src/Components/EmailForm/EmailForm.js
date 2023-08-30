@@ -7,14 +7,18 @@ function EmailForm(props) {
         <div className="modal">
           <div onClick={props.toggleModal} className="overlay"></div>
           <div className="modal-content">
-            <h2>Save PDF</h2>
-            
+            <h3>Save as PDF</h3>
+
             <div className="name">
-              <label className="lab">Please enter a name for this file: </label>
+              <label className="lab">File Name: </label>
               <input classname="in" type="text" id="name" name="name" />
             </div>
-            
-            <input className="send" type="submit" value="Download"></input>
+            <div className="name">
+              <label className="lab">Current Date: </label>
+              <input classname="in" type="text" id="date" name="date" />
+            </div>
+
+            <input className="send" type="submit" value="Save"></input>
           </div>
         </div>
       </form>

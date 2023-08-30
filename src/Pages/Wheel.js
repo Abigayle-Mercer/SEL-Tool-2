@@ -29,6 +29,7 @@ function Wheel(props) {
     // let Q6 = document.getElementById("Q6").value;
     
     const docName = document.getElementById("name").value;
+    const docDate = document.getElementById("date").value;
 
     // Create a canvas to capture the content
     const canvas = await html2canvas(document.getElementById("WholePage"), {
@@ -55,10 +56,10 @@ function Wheel(props) {
 
 
     // Add user info and image to the PDF
-    pdf.text(`Document Name: ${docName}`, 10, 10);
+    pdf.text(`Date: ${docDate}`, 10, 10);
     pdf.addImage(imgData, "PNG", 10, 20, 190, 0);
     pdf.addPage();
-    pdf.addImage(imgData2, "PNG", 0, 0, 180, 0);
+    pdf.addImage(imgData2, "PNG", -10, 0, 230, 0);
 
     // Save the PDF
     pdf.save(`${docName}.pdf`);
