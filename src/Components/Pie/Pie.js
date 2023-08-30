@@ -7,7 +7,7 @@ function Pie(props) {
   return (
     <div>
       <div className="ChartBlock">
-        <div className="ChartPie" style={{ width: "400px" }}>
+        <div className="ChartPie" style={{ width: "450px" }}>
           <svg
             className="ChartPieChunk"
             width="100%" // Adjust the width to accommodate the labels
