@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/SEL-Tool-2/static/css/main.086e012d.css",
+    "main.js": "/SEL-Tool-2/static/js/main.bafc0423.js",
+    "static/js/703.70cb784d.chunk.js": "/SEL-Tool-2/static/js/703.70cb784d.chunk.js",
+    "static/js/598.0a6fc498.chunk.js": "/SEL-Tool-2/static/js/598.0a6fc498.chunk.js",
+    "static/js/787.f9f05a58.chunk.js": "/SEL-Tool-2/static/js/787.f9f05a58.chunk.js",
+    "index.html": "/SEL-Tool-2/index.html",
+    "main.086e012d.css.map": "/SEL-Tool-2/static/css/main.086e012d.css.map",
+    "main.bafc0423.js.map": "/SEL-Tool-2/static/js/main.bafc0423.js.map",
+    "703.70cb784d.chunk.js.map": "/SEL-Tool-2/static/js/703.70cb784d.chunk.js.map",
+    "598.0a6fc498.chunk.js.map": "/SEL-Tool-2/static/js/598.0a6fc498.chunk.js.map",
+    "787.f9f05a58.chunk.js.map": "/SEL-Tool-2/static/js/787.f9f05a58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.086e012d.css",
+    "static/js/main.bafc0423.js"
+  ]
+}
